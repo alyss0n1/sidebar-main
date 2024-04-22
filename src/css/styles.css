@@ -1,0 +1,206 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex; /*alinhar ao lado*/
+    min-height: 100vh; /*altura minina da pagina*/
+    background-color: #fff;
+}
+
+main {
+    padding: 20px;
+    position: fixed;
+    z-index: 1;
+    padding-left: 150px; /*puxar texto do main*/
+    color: #000000;
+}
+
+#sidebar {
+    display: flex;
+    flex-direction: column; /*para um ficar embaixo do outro*/
+    justify-content: space-between; /*botão logout descer*/
+    background-color: #000000;
+    height: 100vh;
+    border-radius: 0px 18px 18px 0px; /*arredondando canto superior e inferior direito*/ 
+    position: fixed;
+    transition: all .5s; /*todos tenham a mesma transiçao de 0.5*/
+    min-width: 82px; /*transition ficar 100% preenchida*/
+    z-index: 2;
+}
+
+#sidebar_content {
+    padding: 12px; /*dar preenchimento*/
+}
+
+#user {
+    display: flex; /*alinhando nome ao lado da imagem*/
+    align-items: center; /*centraliza o item verticalmente*/
+    gap: 8px;
+    margin-bottom: 24px; /*espaçamento entra a imagem e as opçoes*/
+}
+
+/*tamanho da imagem*/
+#user_avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover; /*manter qualidade*/
+    border-radius: 20px; /*para arredodar as bordas da imagem*/
+}
+
+#user_infos {
+    display: flex;
+    flex-direction: column; /*abaixo*/
+}
+
+#user_infos span:last-child { /*apenas o ultimo*/
+    color: #6b6b6b;
+    font-size: 12px;
+}
+
+#side_items {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /*brecha*/
+    list-style: none; /*tirar bolinhas do texto*/
+}
+
+.side-item {
+    border-radius: 8px;
+    padding: 14px;
+    cursor: pointer; /*mostrar que é clicavel*/
+}
+
+.side-item.active { /*ficar selecionado*/
+    background-color: slategray;
+}
+
+.side-item:hover:not(.active), /*que não tiver a classe active*/
+#logout_btn:hover {
+    background-color: slategrey;
+}
+
+.side-item a { /*estilizando textos do menu*/
+    text-decoration: none; /*retirar linhas do texto*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.side-item.active a {
+    color: #e3e9f7;
+}
+
+/*deixando todos os itens na mesma posição*/
+.side-item a i {
+    display: flex;
+    align-items: center;
+    justify-content: center; /*alinhar os itens no eixo principal*/
+    width: 20px;
+    height: 20px;
+    color: #880000;
+}
+
+#logout {
+    border-top: 1px solid #e3e9f7;
+    padding: 12px;
+}
+
+#logout_btn {
+    border: none;
+    padding: 12px; /*preenchimento*/
+    font-size: 14px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    border-radius: 8px;
+    text-align: start; /*texto ficar ao lado*/
+    cursor: pointer;
+    background-color: transparent;
+    color: #880000;
+}
+
+#open_btn {
+    position: absolute; /*para sair do ponto esquerdo a outros elementos*/
+    top: 30px;
+    right: -10px;
+    background-color: #000000;
+    color: #e3e9f7;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#open_btn_icon {
+    transition: transform .3s ease; /*transform para alterar os angulos ease transiçao começar devagar e acelerar no meio*/
+}
+
+.open-sidebar #open_btn_icon { /*quando expandir o menu pelo icone, o icone dar uma volta de 180°*/
+    transform: rotate(180deg);
+}
+
+.item-description {
+    width: 0px; /*encurtar o menu*/
+    overflow: hidden; /*esconder itens*/
+    white-space: nowrap; /* se o texto for muito grande, nao ocorrer quebra de texto*/
+    text-overflow: ellipsis;
+    font-size: 14px;
+    transition: width .6s;
+    height: 0px;
+    color: #880000;
+}
+
+#sidebar.open-sidebar { /*quando tiver com a classe .open-sidebar*/
+    min-width: 15%;
+}
+
+#sidebar.open-sidebar .item-description { /*quando tiver com a classe .open-sider*/
+    width: 150px;
+    height: auto;
+}
+
+#sidebar.open-sidebar .side-item a {
+    justify-content: flex-start; /*alinha os itens no começo do container deixando espaço restante se houver*/
+    gap: 14px;
+}
+
+/*conteudo sobre*/
+.conteudo {
+    margin-left: 15%;
+    margin-top: 5%;
+    color: black;
+}
+
+.neoninicio {
+    margin-left: 14%;
+}
+
+.pini {
+    font-size: 16px;
+    margin-right: 5%;
+}
+
+.explo {
+    margin-left: 15%;
+}
+
+.agentes1 {
+    margin-left: 39%;
+}
+
+.fundamentos1 {
+    margin-left: 33%;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+

@@ -1,0 +1,84 @@
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+  body {
+    background-color: #fff;
+    margin-top: 50px;
+   }
+   
+   
+   /* Estilo para o botão */
+    .back-btn {
+        cursor: pointer;
+        border: 0;
+        border: none;
+        margin-top: 3%;
+        margin-left: 5%;
+        outline: none;
+        box-shadow: none;
+        position: fixed;
+      }
+      
+      .back-btn:hover {
+        
+        color: #A52A2A;
+      }
+
+.back-btn .bi {
+    font-size: 24px;
+}
+
+      /*tornar o botão responsivo*/
+      @media screen and (max-width: 600px) {
+        .back-btn {
+          padding: 10px 16px;
+        }
+      }
+
+
+h1, h2, p {
+    color: black;
+}
+
+.pos-menu {
+ position: fixed;
+  margin-left: 76px;
+  margin-top: 0px;
+  top: 0px;
+  z-index: 10;
+  width: 100%;
+  background-color: #fff;
+}
+
+.pos-menu a{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+ul{
+  list-style-type: none;
+}
+
+a{
+  color: black;
+}
+
+a:hover{
+  color: rebeccapurple;
+}
+
+.links {
+  display: inline;
+  padding-right: 35px;
+  padding-left: 35px;
+  font-family: fantasy;
+  font-size: 16px;
+  color: white;
+}

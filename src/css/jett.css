@@ -1,0 +1,44 @@
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card {
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /*adiciona uma sombra ao elemento*/
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    border: 2px solid rgb(255, 0, 0); /* borda com cor vermelha */
+    margin-left: 21%;
+    margin-top: 5%;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+    display: block; /*imagem como um bloco para nao sobrar espaço*/
+  }
+  
+  .card-content {
+    padding: 40px;
+  }
+  
+  .card-content h2 {
+      font-size: 2rem; /*tamanho da fonte do título*/
+    margin-bottom: 20px; /*margem inferior para separar o título do texto */
+  }
+  
+  .card-content p {
+      font-size: 1.2rem; /*tamanho da fonte do parágrafo*/
+    line-height: 1.6; /*espaçamento entre linhas para melhor legibilidade */
+    overflow: hidden;
+  }
